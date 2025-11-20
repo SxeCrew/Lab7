@@ -1,0 +1,36 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: service-discovery
+
+eureka:
+  client:
+    register-with-eureka: false    # Сервер не регистрируется сам в себе
+    fetch-registry: false          # Сервер не получает registry от других серверов
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    hostname: localhost
+
+  server:
+    enable-self-preservation: false  # Отключаем для разработки
+    wait-time-in-ms-when-sync-empty: 0
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,eureka
+  endpoint:
+    health:
+      show-details: always
+
+# Логирование
+logging:
+  level:
+    com.netflix.eureka: INFO
+    com.netflix.discovery: INFO

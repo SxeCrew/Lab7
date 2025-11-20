@@ -1,0 +1,39 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true           # Включаем автоматическое обнаружение сервисов
+          lower-case-service-id: true
+      routes:
+        # Маршрут через Service Discovery
+        - id: user-service
+          uri: lb://user-service  # lb:// = load balancing через Eureka
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - RewritePath=/api/users/(?<segment>.*), /api/users/$\{segment}
+            - AddRequestHeader=X-Gateway-Request, user-service
+            - AddResponseHeader=X-Gateway-Response, processed
+
+# Eureka Client Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway,routes
+  endpoint:
+    health:
+      show-details: always
