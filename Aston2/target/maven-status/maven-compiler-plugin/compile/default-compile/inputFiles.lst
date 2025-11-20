@@ -1,0 +1,13 @@
+F:\Aston2\src\main\java\com\example\userservice\exception\GlobalExceptionHandler.java
+F:\Aston2\src\main\java\com\example\userservice\config\OpenApiConfig.java
+F:\Aston2\src\main\java\com\example\userservice\dto\UserResponse.java
+F:\Aston2\src\main\java\com\example\userservice\dto\UserRequest.java
+F:\Aston2\src\main\java\com\example\userservice\exception\ErrorResponse.java
+F:\Aston2\src\main\java\com\example\userservice\controller\UserController.java
+F:\Aston2\src\main\java\com\example\userservice\model\User.java
+F:\Aston2\src\main\java\com\example\userservice\UserServiceApplication.java
+F:\Aston2\src\main\java\com\example\userservice\config\Resilience4jConfig.java
+F:\Aston2\src\main\java\com\example\userservice\service\UserService.java
+F:\Aston2\src\main\java\com\example\userservice\exception\EmailAlreadyExistsException.java
+F:\Aston2\src\main\java\com\example\userservice\repository\UserRepository.java
+F:\Aston2\src\main\java\com\example\userservice\exception\UserNotFoundException.java

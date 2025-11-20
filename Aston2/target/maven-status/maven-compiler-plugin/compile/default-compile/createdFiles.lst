@@ -1,0 +1,13 @@
+com\example\userservice\exception\UserNotFoundException.class
+com\example\userservice\config\Resilience4jConfig.class
+com\example\userservice\dto\UserRequest.class
+com\example\userservice\model\User.class
+com\example\userservice\UserServiceApplication.class
+com\example\userservice\config\OpenApiConfig.class
+com\example\userservice\dto\UserResponse.class
+com\example\userservice\controller\UserController.class
+com\example\userservice\service\UserService.class
+com\example\userservice\exception\GlobalExceptionHandler.class
+com\example\userservice\repository\UserRepository.class
+com\example\userservice\exception\ErrorResponse.class
+com\example\userservice\exception\EmailAlreadyExistsException.class
