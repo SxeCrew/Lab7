@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: common-config
+
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
